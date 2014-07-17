@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		//localStorage.setItem("time","60");
+		var w;
+		function countDown()
+		{
+			if(typeof(Worker) !== "undefined")
+			{
+				if(typeof(w) == "undefined")
+				{
+					w = new Worker("webworker.js");
+				}
+				w.onmessage = function (event){
+					document.getElementById("result").innerHTML = event.data;
+				};
+			}
+			else
+			{
+				document.getElementById("result").innerHTML="Please use a web browser";
+			}
+		}
+
+		function stopWorker()
+		{ 
+			w.terminate();
+		}
+		function saveToStorage()
+		{
+
+			var contents = document.getElementById("result").textContent;
+			if(contents!="")
+				localStorage.setItem("info",contents);
+			if(localStorage['info']=="undefined"){
+				localStorage.setItem("info","contents");
+
+			}
+			
+			var bs = localStorage['info'];
+			
+			alert(bs+" seconds left. It was saved.");
+		}
+		function Show()
+		{
+			document.getElementById("result").innerHTML = localStorage['info'];
+			alert(localStorage['info']);
+		}
+
+
+
+
+
+		</script>
+	</head>
+	<body>
+		<button onclick="countDown()">go</button>
+		<button onclick="stopWorker()">stop</button>
+		<button onclick="saveToStorage()">save</button>
+		<button onclick="Show()">show</button>
+		<br>
+		<p id="result"></p>
+		
+	</body>
+
+</html>

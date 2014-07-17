@@ -1,0 +1,91 @@
+/*css for hw1 Author: Mengyi Gong */
+
+span{
+    background-color:#B4009E;
+    color:#ffffff;
+    cursor:default;
+}
+span:hover:after{ /* mouse over */
+    background-color:#DEB887;
+    color:#000000;
+    content:"Spring2014-cs554-HW2";
+    visibility:visible;
+}
+
+body{
+    margin:20px;
+    margin-left:9%;
+    margin-right:9%;
+    border:20px;
+    padding:10px;
+    background-image:url(pics/bg.JPG);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+
+#rule{
+    width:130px;
+    height:60px;
+    background-color:pink;
+}
+
+
+#WordPuzzle{
+    width:350px;
+    height:70px;
+    padding:10px;
+    float:right; 
+    border:1px solid #aaaaaa;
+}
+#WordPuzzle div{
+    width:20px; 
+    height:10px; 
+    padding:0;
+}
+
+table{
+    width: 490px; 
+    height: 400px; 
+    padding: 0.5em; 
+}
+td{
+    width:105px;
+    height:110px;
+    border: 1px;
+}
+
+#DogPuzzle img{
+    width:105px;
+    height:110px;
+}
+#DogPuzzle{
+    float:left;
+    width:450px;
+}
+#DogPuzzle div{
+    float:left; 
+    width:450px; 
+    height:500px; 
+    padding:0;
+}
+table{
+    width: 490px; 
+    height: 400px; 
+   
+}
+#PuzzleArea{  
+    width: 490px; 
+    height: 400px; 
+    padding: 0.5em; 
+    float: right; 
+    margin: 10px; 
+    background-color:#FFFFCC;
+}
+#PuzzleArea div{
+    float:left; 
+    width:120px; 
+    height:130px; 
+    padding:0;
+    border:1px solid #aaaaaa;
+}
+

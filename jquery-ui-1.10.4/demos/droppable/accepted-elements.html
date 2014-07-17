@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Droppable - Accept</title>
+	<link rel="stylesheet" href="../../themes/base/jquery.ui.all.css">
+	<script src="../../jquery-1.10.2.js"></script>
+	<script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.mouse.js"></script>
+	<script src="../../ui/jquery.ui.draggable.js"></script>
+	<script src="../../ui/jquery.ui.droppable.js"></script>
+	<link rel="stylesheet" href="../demos.css">
+	<style>
+	#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+	#draggable, #draggable-nonvalid { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	</style>
+	<script>
+        $(document).ready(function(){
+            $("#rule").fadeToggle();
+            $("button").click(function(){
+                $("#rule").fadeToggle(3000);
+            });
+        });
+    </script>
+    
+    <script>
+        //for the word puzzle part
+        $(function() {
+            //make the words in the divw draggable
+            $("#divw li" ).draggable({
+                revert: "invalid", 
+                appendTo: "body",
+                cursor: "pointer",
+                helper: "clone"
+            });
+            
+            //make the WordPuzzle holder part droppable and sortable
+            $( "#WordPuzzle ul" ).droppable({
+                accept: "#divw li",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-hover",
+                drop: function( event, ui ) {
+                    $( this ).find( ".welw" ).remove();
+                    $( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
+                }
+            }).sortable({
+      items: "li:not(.placeholder)",
+      sort: function() {
+        // gets added unintentionally by droppable interacting with sortable
+        // using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
+        $( this ).removeClass( "ui-state-default" );
+      }
+            });
+        });
+    </script>
+    
+    
+    <script>
+        $(function() {
+            var $DogPuzzle = $("#DogPuzzle"),
+                $puzzle1 = $(".p00"),
+                $puzzle2 = $(".p01"),
+                $puzzle3 = $(".p02"),
+                $puzzle4 = $(".p03"),
+                $puzzle5 = $(".p10"),
+                $puzzle6 = $(".p11"),
+                $puzzle7 = $(".p12"),
+                $puzzle8 = $(".p13"),
+                $puzzle9 = $(".p20"),
+                $puzzle10 = $(".p21"),
+                $puzzle11 = $(".p22"),
+                $puzzle12 = $(".p23"),
+                $PuzzleArea = $("#PuzzleArea");
+            //make puzzle pics draggable
+            $("IMG", DogPuzzle).draggable({
+                revert: "invalid", 
+                containment: "document",
+                opacity: 0.40, 
+                cursor: "move"
+            });
+            $puzzle1.droppable({
+                accept:"#dogp1",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                    $(".blankp").remove();
+                    $(this).find("img").remove();
+//                    $("<img>").attr("src","pics/00.jpeg").appendTo(this);
+                    ui.draggable.fadeIn(function() {
+                        ui.draggable
+                        .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                    });
+                }
+            });
+            $puzzle2.droppable({
+                accept:"#dogp2",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+//                    $("<img>").attr("src","pics/00.jpeg").appendTo(this);
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle3.droppable({
+                accept:"#dogp3",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+//                    $("<img>").attr("src","pics/00.jpeg").appendTo(this);
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle4.droppable({
+                accept:"#dogp4",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+//                    $("<img>").attr("src","pics/00.jpeg").appendTo(this);
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle5.droppable({
+                accept:"#dogp5",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+//                    $("<img>").attr("src","pics/00.jpeg").appendTo(this);
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle6.droppable({
+                accept:"#dogp6",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle6.droppable({
+                accept:"#dogp6",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle7.droppable({
+                accept:"#dogp7",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle8.droppable({
+                accept:"#dogp8",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle9.droppable({
+                accept:"#dogp9",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                           .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle10.droppable({
+                accept:"#dogp10",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle11.droppable({
+                accept:"#dogp11",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                            .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+            $puzzle12.droppable({
+                accept:"#dogp12",
+                activeClass: "ui-state-highlight",
+                hoverClass: "ui-state-active",
+
+                drop: function(event, ui){
+                        $(".blankp").remove();
+                        $(this).find("img").remove();
+                        ui.draggable.fadeIn(function() {
+                            ui.draggable
+                          .animate({ width: "105px" })
+                            .find( "img" )
+                            .animate({ height: "110px" });
+                        });
+                }
+            });
+        });
+    </script>
+</head>
+    
+<body>
+    <button>click here to see rule</button>
+    <div id="rule">drag the picture to the blank to finish a picture</div><br><br><br><br><br>
+    <div id="WordPuzzle">
+        <ul>
+            <li class=welw></li>
+        </ul>
+    </div><br>
+    <div id="divw">
+        <ul>
+            <li>a</li>
+            <li>this</li>
+            <li>funny</li>
+            <li>puzzle</li>
+            <li>word</li>
+            <li>lol</li>
+        </ul>
+    </div>
+    
+    <br><br><br><br><br><br><br>
+    <div id="PicP">
+    <div id="DogPuzzle"> 
+        <img id="dogp1" src="pics/00.png" alt="PuzzlePiece"/> 
+        <img id="dogp2" src="pics/01.png" alt="PuzzlePiece"/> 
+        <img id="dogp3" src="pics/02.png" alt="PuzzlePiece"/> 
+        <img id="dogp4" src="pics/03.png" alt="PuzzlePiece"/> 
+        <img id="dogp5" src="pics/10.png" alt="PuzzlePiece"/> 
+        <img id="dogp6" src="pics/11.png" alt="PuzzlePiece"/> 
+        <img id="dogp7" src="pics/12.png" alt="PuzzlePiece"/> 
+        <img id="dogp8" src="pics/13.png" alt="PuzzlePiece"/> 
+        <img id="dogp9" src="pics/20.png" alt="PuzzlePiece"/> 
+        <img id="dogp10" src="pics/21.png" alt="PuzzlePiece"/> 
+        <img id="dogp11" src="pics/22.png" alt="PuzzlePiece"/> 
+        <img id="dogp12" src="pics/23.png" alt="PuzzlePiece"/> 
+    </div> 
+    <br>
+        <div id="PuzzleArea">
+            <table>
+                <tr>
+                  <td class="p00"><img id="blankp" src="pics/d.png"/></td>
+                  <td class="p01"><img id="blankp" src="pics/o.png"/></td>		
+                  <td class="p02"><img id="blankp" src="pics/d.png"/></td>
+                  <td class="p03"><img id="blankp" src="pics/d.png"/></td>
+                </tr>
+                <tr>
+                  <td class="p10"><img id="blankp" src="pics/d.png"/></td>
+                  <td class="p11"><img id="blankp" src="pics/d.png"/></td>		
+                  <td class="p12"><img id="blankp" src="pics/d.png"/></td>
+                  <td class="p13"><img id="blankp" src="pics/d.png"/></td>
+                </tr>
+                <tr>
+                  <td class="p20"><img id="blankp" src="pics/d.png"/></td>
+                  <td class="p21"><img id="blankp" src="pics/d.png"/></td>		
+                  <td class="p22"><img id="blankp" src="pics/d.png"/></td>
+                  <td class="p23"><img id="blankp" src="pics/d.png"/></td>
+                </tr>
+            </table>
+        
+        </div>
+    </div>
+</body>
+</html>

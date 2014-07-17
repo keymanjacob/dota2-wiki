@@ -1,0 +1,178 @@
+footer{
+  background-color: #1f1111;
+  color: #FFF;
+  padding: 15px 0;
+  z-index: 999;
+  
+  position:relative;
+    bottom:0;
+    width:100%;
+    
+   
+}
+#D2{
+	color: rgb(187, 130, 130);
+	font-size: 1.5em;
+	margin:10px;
+	text-align: center;
+}
+#main_footer{
+	text-align: center;
+	text-transform:capitalize;
+}
+#p_footer{
+	margin: 10px;
+}
+body{
+	background: url('bg4.jpg');
+	background-repeat:repeat-y;
+	overflow: scroll;
+}
+#nav111{
+	margin-top: 50px;
+}
+#hiiden{
+	display: none;
+}
+
+@media screen and (max-width: 768px){
+	#hiiden{
+		display: block;
+	}
+	#hhiden{
+		display: none;
+	}
+}
+
+.slidesshow{
+	opacity: 0.8;
+}
+article:first-of-type{
+	height: 110%;
+	border: solid gray 0px;
+	background-color:black;
+	opacity: 0.9; 
+	margin-bottom: 200px;
+
+}
+     div .inccc{
+  margin-top: 220px;
+  margin-left: 70px;
+  margin-bottom: auto;
+  width: 50px;
+  height: 50px;
+}
+
+.inccc img{
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 600px){
+  div .inccc{
+    display: none;
+  
+}
+
+.inccc img{
+  display: none;
+}
+
+}
+
+a{
+	color: #C0C0C0;
+	font-size: 1.3em;
+
+}
+a:hover {color:orange ;} 
+#intros{
+	margin-top: 3%;
+	width: 100%;
+	height: 56%;
+}
+#intros2{
+	margin-top: 7%;
+	width: 100%;
+	height: 56%;
+}
+.heros{
+	margin-top: 7%;
+}
+.place{
+	margin-bottom: 200px;
+}
+.section_name{
+	color: white;
+	font-size: 1.2em;
+}
+#msg{
+	color: white;
+
+}
+.last{
+	background-color: black;
+}
+.navbar {
+ 
+  font-family:'Vollkorn','serif';
+}
+
+#this-carousel-id{
+	margin-top: 2%;
+}
+    #myTypingText {
+    background-color:#FFFS;
+    
+    padding:12px;
+    color:#FFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    line-height:1.5em;
+}
+ #myTypingText2 {
+    margin-top: 3%;
+    background-color:#FFFS;
+    
+    padding:12px;
+    color:#FFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    line-height:1.5em;
+}
+.icn_footer{
+	width: 80px;
+	height: 100%;
+	margin:10px;
+}
+#set{
+	font-size: 1.4em;
+	text-align: center;
+	color: orange;
+}
+#form_head{
+	position: relative;
+	height: 500px;
+	margin-top: 2%;
+	background-color: #473333;
+	opacity: 0.7;
+}
+.form_text{
+	font-size: 1.4em;
+	color: white;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+.mgb{
+	margin-bottom: 10px;
+}
+#qrcd{
+	height: 200px;
+	background-color: white;
+	margin-top: 2%;
+	font-size: 4em;
+	color: red;
+}
+
+
+
+

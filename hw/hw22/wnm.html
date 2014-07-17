@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		if(localStorage['tt']=="undefined"){
+			localStorage.setItem("tt",24);
+		}else{
+			localStorage['tt'] = localStorage['info'];
+		}
+		
+		var w;
+		function countDown()
+		{
+			if(typeof(Worker) !== "undefined")
+			{
+				if(typeof(w) == "undefined")
+				{
+					w = new Worker("wnm.js");
+				}
+				w.onmessage = function (event){
+					if(event.data=="time"&&localStorage['tt']>1){
+						localStorage['tt']--;
+						document.getElementById("result").innerHTML=localStorage['tt'];
+					}else if(localStorage['tt']==1){
+						document.getElementById("result").innerHTML="time up";
+					}
+					
+				};
+			}
+			else
+			{
+				document.getElementById("result").innerHTML="Please use a web browser";
+			}
+		}
+
+		function stopWorker()
+		{ 
+			w.terminate();
+		}
+		function saveToStorage()
+		{
+
+			var contents = document.getElementById("result").textContent;
+			if(contents!=""&&contents!="time up")
+			{
+				localStorage.setItem("info",contents);
+				var bs = localStorage['info'];
+				alert(bs+" seconds left. It was saved.");
+			}
+			
+			
+			
+		}
+		function Show()
+		{
+			document.getElementById("result").innerHTML = localStorage['info'];
+			alert(localStorage['info']+" seconds remaining"+localStorage['tt']);
+			
+		}
+
+
+
+
+
+		</script>
+	</head>
+	<body>
+		<button onclick="countDown()">go</button>
+		<button onclick="stopWorker()">stop</button>
+		<button onclick="saveToStorage()">save</button>
+		<button onclick="Show()">show time left</button>
+		<br>
+		<p id="result"></p>
+		
+	</body>
+
+</html>

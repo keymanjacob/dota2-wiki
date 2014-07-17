@@ -1,0 +1,43 @@
+<div id="#mt">
+<div class="col-md-2 col-md-offset-1">
+            <input ng-model="searchbyname" id="colorsearch" class="form-control" type="text" placeholder="search your hero!">
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+            <select class="form-control" id="colorsearch" ng-model="searchbycate">
+            <option value="">category filter</option>
+            <option value="STRENGTH">STRENGTH</option>
+            <option value="AGILITY">AGILITY</option>
+            <option value="INTELLIGENCE">INTELLIGENCE</option>
+        </select>
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+        <select id="colorsearch" class="form-control" ng-model="sort">
+            <option value="">default sorting</option>
+            <option value="name">name</option>
+            <option value="category">category</option>
+        </select>
+      
+        </div>
+        <div class="row" >
+        <ul  class="list-inline col-md-10 col-md-offset-1" id= "heroboard"  >    
+                 <li ng-repeat="hero in heros | filter:searchbyname |filter:searchbycate|orderBy:sort" ng-class="{herohover:hover,addborder:border}" 
+                 popover="{{hero.name}}" popover-trigger="mouseenter" ng-mouseover="hover=true" ng-click="border=true" ng-mouseleave="hover=false;border=false"  >
+                <a href='heros.html#/hero/{{hero.name}}' class='img-circle' >
+                <img class='img-responsive' src='{{hero.url}}' name='{{hero.name}}' value='{{hero.category}}'>
+                </a>      
+            </li>
+     
+        </ul>
+        </div>
+</div>
+        
+        <div class="col-md-10 col-md-offset-1">
+         <audio src="Dota2_music_battle_002.mp3" controls="controls" autoplay="autoplay"></audio>
+            <div ng-controller="clock" id="clock">
+              <h5>Current time:  {{ clock }}</h5>
+            </div>
+            </div>
+            
+   
+            
+      

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html ng-app="dota2">
+	<head>
+		<meta charset = "utf-8"/>
+        <link rel="stylesheet" href="jquery-ui-1.10.4/themes/base/jquery.ui.all.css">
+        <script src="jquery-ui-1.10.4/jquery-1.10.2.js"></script>
+        <script src="jquery-ui-1.10.4/ui/jquery.ui.core.js"></script>
+        <script src="jquery-ui-1.10.4/ui/jquery.ui.widget.js"></script>
+        <script src="jquery-ui-1.10.4/ui/jquery.ui.mouse.js"></script>
+        <script src="jquery-ui-1.10.4/ui/jquery.ui.draggable.js"></script>
+        <script src="jquery-ui-1.10.4/ui/jquery.ui.droppable.js"></script>
+		<script src="js/bootstrap.min.js"></script>    
+		<title>Puzzle game</title>
+		<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="css/Dota2_index.css" >
+
+        <style>
+            #draggable, #droppable { width: 100px; height: 100px; padding: 0.5em;  margin: 0 10px 10px 0;}
+    
+    
+            img { height:180px; width:240px;}
+            .pic17{
+                height: 500px;
+                width: auto;
+                margin-top: 50px;
+            }
+            
+            .text{ color: white;}
+            table { border:0px; border-spacing:0px;
+            }
+
+            #back{
+                background-color: black;
+                color:#d89324;
+                border: 1px solid red;
+            }    
+            #colorsearch{
+                background-color: black;
+                color:white;
+            }
+                 
+        </style>
+	</head>
+    <script>
+
+    $(function() {
+
+        $( "img" ).draggable({ revert: "invalid",snap: true,stack: "img",scroll: true,});
+        
+        
+        $(".1").droppable({
+        accept:".pic5",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic5").parent());
+        $(".pic5").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/1.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".2").droppable({
+        accept:".pic1",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic1").parent());
+        $(".pic1").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/2.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".3").droppable({
+        accept:".pic7",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic7").parent());
+        $(".pic7").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/3.jpeg").appendTo(this);
+        }
+        })
+        $(".4").droppable({
+        accept:".pic6",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic6").parent());
+        $(".pic6").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/4.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".5").droppable({
+        accept:".pic2",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic2").parent());
+        $(".pic2").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/5.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".6").droppable({
+        accept:".pic9",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic9").parent());
+        $(".pic9").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/6.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".7").droppable({
+        accept:".pic4",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic4").parent());
+        $(".pic4").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/7.jpeg").appendTo(this);
+        }
+        })
+        $(".8").droppable({
+        accept:".pic12",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic12").parent());
+        $(".pic12").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/8.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".9").droppable({
+        accept:".pic11",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic11").parent());
+        $(".pic11").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/9.jpeg").appendTo(this);
+        }
+        })
+        $(".10").droppable({
+        accept:".pic3",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic3").parent());
+        $(".pic3").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/10.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".11").droppable({
+        accept:".pic15",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic15").parent());
+        $(".pic15").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/11.jpeg").appendTo(this);
+        }
+        })
+        $(".12").droppable({
+        accept:".pic8",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic8").parent());
+        $(".pic8").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/12.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".13").droppable({
+        accept:".pic14",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic14").parent());
+        $(".pic14").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/13.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".14").droppable({
+        accept:".pic16",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic16").parent());
+        $(".pic16").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/14.jpeg").appendTo(this);
+        }
+        })
+        $(".15").droppable({
+        accept:".pic13",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic13").parent());
+        $(".pic13").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/15.jpeg").appendTo(this);
+        }
+        })
+        
+        $(".16").droppable({
+        accept:".pic10",
+        drop: function( event, ui ) {
+        $(this).find("img").appendTo($(".pic10").parent());
+        $(".pic10").remove();
+        $(this).find("img").remove();
+        $("<img>").attr("src","img/16.jpeg").appendTo(this);
+        }
+        })
+        
+        
+
+    });
+    
+    
+    
+  
+    </script>
+    
+	<body >
+        <div >
+            <button type="button" class="btn btn-default btn-lg" id="back" onclick="window.location.href='Dota2_index.php'">Back to Main</button>
+        </div>
+        <br/>
+        <div class="col-md-10 col-md-offset-1" style="overflow-y:hidden;">
+        <table>
+                <tr>
+                    <td class="1"><img class="pic1" src="img/2.jpeg" alt=""></td>
+                    <td class="2"><img class="pic2" src="img/5.jpeg" alt=""></td>
+                    <td class="3"><img class="pic3" src="img/10.jpeg" alt=""></td>
+                    <td class="4"><img class="pic4" src="img/7.jpeg" alt=""></td>
+                </tr>
+                
+                <tr>
+                    <td class="5"><img class="pic5" src="img/1.jpeg" alt=""></td>
+                    <td class="6"><img  class="pic6" src="img/4.jpeg" alt=""></td>
+                    <td class="7"><img  class="pic7" src="img/3.jpeg" alt=""></td>
+                    <td class="8"><img class="pic8" src="img/12.jpeg" alt=""></td>
+                </tr>
+                
+                <tr>
+                    <td class="9"><img class="pic9" src="img/6.jpeg" alt=""></td>
+                    <td class="10"><img class="pic10" src="img/16.jpeg" alt=""></td>
+                    <td class="11"><img class="pic11" src="img/9.jpeg" alt=""></td>
+                    <td class="12"><img class="pic12" src="img/8.jpeg" alt=""></td>
+                </tr>
+                
+                <tr>
+                    <td class="13"><img class="pic13" src="img/15.jpeg" alt=""></td>
+                    <td class="14"><img class="pic14" src="img/13.jpeg" alt=""></td>
+                    <td class="15"><img class="pic15" src="img/11.jpeg" alt=""></td>
+                    <td class="16"><img class="pic16" src="img/14.jpeg" alt=""></td>
+                </tr>
+        </table>
+        </div>
+        <div class="row col-md-10 col-md-offset-1">
+        <h1 class="text col-md-3 col-sm-10 col-xs-10">Hint is right here! Have fun  :)!</h1>
+        <img class="pic17 col-md-6 col-sm-10 col-xs-10" src="img/17.jpg">
+        </div>
+        
+        <footer class="row col-md-10 col-md-offset-1">
+        <p id ="main_footer">&copy; all rights reserved 2014 Guanhua Fan, Guangji Wang, Zhengfei Duan</p><hr>
+        <p class="col-md-3" id = "p_footer">
+            <b style="color:orange; font-size:1.5em;">Like our Website?</b><br><BR>
+            If you're ready to rock harder than your rivals in game, get in touch with us today!</li><BR>
+            <br><br><b>CONTACT US</b>
+
+        </p>
+
+
+        <ul class="col-md-2 list-unstyled" id = "p_footer">
+            <li><b>RECENT UPDATES</b></li>
+            <li>&#10146;Dota2 Update 4/25/2014</li>
+            <li>&#10146;Dota2 Update 3/18/2014</li>
+            <li>&#10146;Dota2 Update 2/29/2014</li>
+            <li><a href="#">more</a></li>
+        </ul>
+
+        <ul class="col-md-5 list-unstyled">
+           
+            <li>  <br></li>
+            <li><img class="icn_footer" src="fb.png" alt=""><img class="icn_footer" src="tr.png" alt=""><img class="icn_footer" src="rr.png" alt=""><img class="icn_footer" src="wb.png" alt=""></li>
+            <li>Donate For Our Website!</li>
+        </ul>
+
+
+
+
+
+    </footer>
+	</body>
+
+
+</html>

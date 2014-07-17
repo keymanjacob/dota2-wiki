@@ -1,0 +1,44 @@
+
+            <div class="infopanel col-md-10 col-md-offset-1 ">
+                <h1 class="bigname">{{details.name}}</h1>
+                <img class="topimg col-md-offset-4" src="{{details.picture}}">
+                <div ng-controller="vote" >
+                    <button type="button" ng-click="addlike()"  class="btn btn-primary btn-lg col-md-offset-4">Like<span class="badge">{{like}}</span></button>
+                    <button type="button" ng-click="addhate()"class="btn btn-warning btn-lg col-md-offset-1">Hate<span class="badge">{{hate}}</span></button>
+                </div>
+            </div>
+            
+         <div class="panel panel-default col-md-10 col-md-offset-1" id="colorsearch">
+              <div class="panel-heading" id="colorsearch">
+                <h3 class="panel-title">Introduction</h3>
+              </div>
+               <div class="boxtop"></div>
+              <div class="panel-body">
+                {{details.desc}}
+              </div>
+               <div class="boxtop"></div>
+            </div>
+            
+            <div class="col-md-10 col-md-offset-1" id="colorsearch">
+                <h3 id="skill">Skills</h3>
+            </div>
+            <div class="panel panel-default col-md-10 col-md-offset-1" ng-repeat="skill in details.skills" id="colorsearch">
+              
+              <div class="panel-heading" id="colorsearch" >
+                <h3 class="panel-title">{{skill.skillname}}</h3>
+              </div>
+               <div class="boxtop"></div>
+              <div class="panel-body">
+                <img src="{{skill.picurl}}" alt="skill" class="img-rounded">
+                <p>{{skill.skilldesc}}</p>
+              </div>
+               <div class="boxtop"></div>
+               
+            </div>
+       
+              
+            
+            </div>
+          
+        
+
