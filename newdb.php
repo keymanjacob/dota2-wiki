@@ -3,10 +3,10 @@ class database
 {
 	private $link;
 	private $res;
-	private $host = "fan1331011230159.db.12081004.hostedresource.com";
-	private $user = "fan1331011230159";
-	private $pass = "F90fgh314@";
-	private $db = "fan1331011230159";
+	private $host = "something that i will never tell you";
+	private $user = "something that i will never tell you";
+	private $pass = "something that i will never tell you";
+	private $db = "something that i will never tell you";
 
 	public function setup($u, $p, $h, $db)
 	{
