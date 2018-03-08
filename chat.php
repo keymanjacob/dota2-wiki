@@ -23,6 +23,7 @@ $name=$_SESSION['login_name'];
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+    <!-- TODO: create new framework for this project -->
     <meta charset = "utf-8"/>
     <title>Dota2 Wikipedia</title>
     <link rel="stylesheet" href="css/bootstrap.css" media="screen">
