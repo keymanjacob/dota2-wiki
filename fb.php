@@ -1,5 +1,5 @@
 <?php 
-
+// TODO: add copyright to all files
 // A FacebookResponse is returned from an executed FacebookRequest
 try {
   $response = (new FacebookRequest($session, 'GET', '/me'))->execute();
